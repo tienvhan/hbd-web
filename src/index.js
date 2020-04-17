@@ -30,15 +30,18 @@ function App() {
     });
   }
 
-  function changeBG(event) {}
+  function changeBG(event) {
+    console.log(event.target.value);
+    document.body.style.backgroundImage = "url('" + event.target.src + "')";
+  }
 
   return (
     <div className="App">
       <h1>Unsplash Photo Search</h1>
-      <h2>
+      <h4>
         Apfter the results are displayed click any image to use it as the
         website's background
-      </h2>
+      </h4>
       <input
         onChange={handleChange}
         name="photo"
