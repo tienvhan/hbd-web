@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import "./styles.css";
 import axios from "axios";
-import backgroundImage from "../public/initial_bg.jpg";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 
@@ -65,7 +64,6 @@ function App() {
         Search
       </Button>
       <br />
-
       {result.map(photo => (
         <img src={photo.urls.small} id="{photo.id}" onClick={changeBG} />
       ))}

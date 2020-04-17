@@ -19,9 +19,9 @@ html {
 
 h1 {
   color: rgb(70, 130, 180);
-  text-shadow: 3px 3px rgb(176, 224, 230);
+  text-shadow: 3px 3px 3px rgb(176, 224, 230);
 }
 
 h4 {
-  color: rgb(255, 99, 71);
+  color: rgb(240, 128, 128);
 }
