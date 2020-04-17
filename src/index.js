@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import "./styles.css";
 import axios from "axios";
+import backgroundImage from "../public/initial_bg.jpg";
 
 function App() {
   const [photo, setPhoto] = useState("");
@@ -10,6 +11,16 @@ function App() {
   );
 
   const [result, setResult] = useState([]);
+
+  const styles = {
+    container: {
+      backgroundPosition: "center",
+      backgroundSize: "cover",
+      backgroundRepeat: "no-repeat",
+      width: "100vw",
+      height: "100vh"
+    }
+  };
 
   function handleChange(event) {
     setPhoto(event.target.value);
@@ -36,10 +47,10 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="App" style={styles}>
       <h1>Unsplash Photo Search</h1>
       <h4>
-        Apfter the results are displayed click any image to use it as the
+        After the results are displayed click any image to use it as the
         website's background
       </h4>
       <input
@@ -54,7 +65,7 @@ function App() {
       <br />
 
       {result.map(photo => (
-        <img src={photo.urls.regular} id="{photo.id}" onClick={changeBG} />
+        <img src={photo.urls.small} id="{photo.id}" onClick={changeBG} />
       ))}
     </div>
   );

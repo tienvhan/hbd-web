@@ -1,4 +1,12 @@
 .App {
-  font-family: sans-serif;
+  font-family: serif;
   text-align: center;
+}
+
+html {
+  background: url("/initial_bg.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
