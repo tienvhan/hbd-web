@@ -9,6 +9,8 @@ function App() {
     "04RXO8uHdsa2-qLy3ydVG6NuzDGq-T_rsmM4OcXFCME"
   );
 
+  const [result, setResult] = useState([]);
+
   function handleChange(event) {
     setPhoto(event.target.value);
   }
@@ -24,8 +26,11 @@ function App() {
 
     axios.get(url).then(response => {
       console.log(response);
+      setResult(response.data.results);
     });
   }
+
+  function changeBG(event) {}
 
   return (
     <div className="App">
@@ -43,6 +48,11 @@ function App() {
       <button onClick={handleSubmit} type="submit">
         Search
       </button>
+      <br />
+
+      {result.map(photo => (
+        <img src={photo.urls.regular} id="{photo.id}" onClick={changeBG} />
+      ))}
     </div>
   );
 }
