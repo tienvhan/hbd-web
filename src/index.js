@@ -3,6 +3,8 @@ import ReactDOM from "react-dom";
 import "./styles.css";
 import axios from "axios";
 import backgroundImage from "../public/initial_bg.jpg";
+import Button from "@material-ui/core/Button";
+import TextField from "@material-ui/core/TextField";
 
 function App() {
   const [photo, setPhoto] = useState("");
@@ -48,20 +50,20 @@ function App() {
 
   return (
     <div className="App" style={styles}>
-      <h1>Unsplash Photo Search</h1>
+      <h1 class="custom">Unsplash Photo Search</h1>
       <h4>
         After the results are displayed click any image to use it as the
         website's background
       </h4>
-      <input
+      <TextField
         onChange={handleChange}
         name="photo"
         type="text"
-        placeholder="Search for photos"
+        placeholder="Enter keywords"
       />
-      <button onClick={handleSubmit} type="submit">
+      <Button onClick={handleSubmit} type="submit">
         Search
-      </button>
+      </Button>
       <br />
 
       {result.map(photo => (
