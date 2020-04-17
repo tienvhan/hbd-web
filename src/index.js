@@ -51,8 +51,12 @@ function App() {
     <div className="App" style={styles}>
       <h1 class="custom">Unsplash Photo Search</h1>
       <h4>
-        After the results are displayed click any image to use it as the
-        website's background
+        <pre>
+          After the results are displayed click any image to use it as the
+          website's background
+          <br />
+          (Click the upper right button for fullscreen)
+        </pre>
       </h4>
       <TextField
         onChange={handleChange}
